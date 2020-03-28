@@ -80,12 +80,10 @@ def run(argv=None):
     pipeline_args.extend([
         '--runner=DataflowRunner',
         #'--runner=DirectRunner',
-        #'--region=us-central1',
         '--project=dataflow-271218',
         '--staging_location=gs://treinamento_dataflow/staging/stagin_area',
         '--temp_location=gs://treinamento_dataflow/temp/temp_area',
         '--job_name=treinamento-dataflow',
-        #'--serviceAccount=dataflow-lab@dataflow-271218.iam.gserviceaccount.com',
     ])
     data_ingestion = DataIngestion()
 
