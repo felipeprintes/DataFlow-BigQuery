@@ -35,7 +35,8 @@ class DataIngestion():
 
 def trata(row):
     from datetime import datetime
-    x = {"id":int(row[0]),
+    x = {
+    "id":int(row[0]),
     "case_in_country":int(row[1]),
     "reporting_date": "1001-01-01" if row[2]==0 else str(datetime.strptime(row[2], '%m/%d/%Y').date()),
     "summary":str(row[4]),
