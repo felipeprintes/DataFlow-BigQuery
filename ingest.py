@@ -94,7 +94,6 @@ def run(argv=None):
         |'Read from text' >> beam.io.ReadFromText(known_args.input, skip_header_lines=1)
         |'String to Bigquery Row' >> beam.Map(lambda s: data_ingestion.parse_method(s))
         |'Tratamento' >> beam.Map(trata)
-        #|beam.Map(print)
         |'Escrita BigQuery' >> beam.io.WriteToBigQuery(
             known_args.output,
             schema=SCHEMA,
